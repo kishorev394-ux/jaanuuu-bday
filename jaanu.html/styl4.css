@@ -1,0 +1,112 @@
+body {
+    /* Set a nice background gradient */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.birthday-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 90%;
+    width: 600px;
+    text-align: center;
+    transform: scale(0.95); /* Slight scale down for better fit */
+    transition: transform 0.3s ease;
+}
+
+.birthday-card:hover {
+    transform: scale(1.0); /* Hover effect to make it pop */
+}
+
+/* --- Headings and Text --- */
+.main-heading {
+    font-family: 'Pacifico', cursive; /* A fun, cursive font */
+    color: #e91e63; /* A vibrant pink/red color */
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: bounce 1.5s infinite alternate; /* The creative animation */
+}
+
+.sub-heading {
+    font-size: 1.1em;
+    color: #607d8b;
+    margin-bottom: 25px;
+}
+
+.message {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    font-style: italic;
+    color: #4a4a4a;
+    border-top: 2px dashed #ffcdd2;
+    padding-top: 15px;
+}
+
+.signature {
+    font-size: 1em;
+    font-weight: bold;
+    color: #e91e63;
+    margin-top: 20px;
+}
+
+/* --- Image Gallery --- */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.birthday-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover .birthday-img {
+    transform: scale(1.05) rotate(1deg); /* Subtle zoom/rotate on hover */
+}
+
+/* --- Animation Keyframes --- */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        transform: translateY(-5px);
+        text-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* --- Responsive Design for Smaller Screens --- */
+@media (max-width: 650px) {
+    .main-heading {
+        font-size: 2.5em;
+    }
+
+    .image-gallery {
+        flex-direction: column; /* Stack images vertically on small screens */
+    }
+
+    .birthday-card {
+        padding: 20px;
+    }
+}
